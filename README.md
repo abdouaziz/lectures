@@ -1,7 +1,7 @@
 
  
 <p align="center">
-<img src="data/Images/logo.png"  >
+<img src="./data/Images/logo.png"  >
 </p>
 
 
