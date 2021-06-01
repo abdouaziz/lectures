@@ -85,5 +85,10 @@ target/
 *.swp
 *.swo
 
+*.ini 
+
 # Mypy cache
-.mypy_cache/
+.mypy_cache/ 
+
+data
+Makefile
