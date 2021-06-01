@@ -91,3 +91,7 @@ target/
 .mypy_cache/ 
 
 
+*.Images
+*.tox.ini*
+*.setup.py
+*.test_environment.py
