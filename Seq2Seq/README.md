@@ -1,30 +1,11 @@
-# Sequence to Sequence Learning with Neural Networks
-
-Deep Neural Networks are powerful models that have achieved excellent performance on difficult learning tasks. Although DNNs work well whenever large labeled training sets are available, they cannot be used to map sequences to sequences. In this [paper](https://arxiv.org/pdf/1409.3215.pdf), they present a general end-to-end approach to sequence learning that makes minimal assumptions on the sequence structure. 
-
-## About 
-
-This notebook consist à lecture of the paper , we through different point to better understant how Seq2seq 
-architecture , for this we are going to see :
-
-* What is it, what does it do / Abstract
-* Project status: working/prototype
-* Nuxeo Support
-
-See real examples:
-
-* <https://github.com/nuxeo/nuxeo/blob/master/README.md>
-* <https://github.com/nuxeo/nuxeo-drive/blob/master/README.md>
-* <https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/README.md>
 
 ## Table of contents
 
-Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 
 > * [Title / Repository Name](#title--repository-name)
->   * [About / Synopsis](#about--synopsis)
+>   * [Introduction / Synopsis](#about--synopsis)
 >   * [Table of contents](#table-of-contents)
->   * [Installation](#installation)
+>   * [The Paper](#installation)
 >   * [Usage](#usage)
 >     * [Screenshots](#screenshots)
 >     * [Features](#features)
@@ -39,12 +20,45 @@ Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 >   * [License](#license)
 >   * [About Nuxeo](#about-nuxeo)
 
-## Installation
 
-Sample:
 
-* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
-* From the command line: `nuxeoctl mp-install nuxeo-sample`
+# Sequence to Sequence Learning with Neural Networks
+
+Deep Neural Networks are powerful models that have achieved excellent performance on difficult learning tasks. Although DNNs work well whenever large labeled training sets are available, they cannot be used to map sequences to sequences. In this [paper](https://arxiv.org/pdf/1409.3215.pdf), they present a general end-to-end approach to sequence learning that makes minimal assumptions on the sequence structure. 
+
+## Introduction 
+
+
+Deep Neural Networks are powerful models that have achieved excellent performance on difficult learning tasks , 
+Despite their flexibility and power, DNNs can only be applied to problems whose inputs and targets can be sensibly encoded with vectors of fixed dimensionality. It is a significant limitation, since many important problems are best expressed with sequences whose lengths are not known a-priori.
+
+For example, speech recognition and machine translation are sequential problems. Likewise, question answering can also be seen as mapping a sequence of words representing the question to a sequence of words representing the answer .
+
+Sequences pose a challenge for DNNs because they require that the dimensionality of the inputs and
+outputs is known and fixed
+
+
+
+
+ 
+
+
+## The Paper
+
+In this paper, we show that a straightforward application of the Long
+Short-Term Memory (LSTM) architecture [16] can solve general sequence to sequence problems.
+The idea is to use one LSTM to read the input sequence, one timestep at a time, to obtain large fixeddimensional vector representation, and then to use another LSTM to extract the output sequence
+from that vector (fig. 1).
+
+A useful property of the LSTM is that it learns to map an input sentence of variable length into
+a fixed-dimensional vector representation. Given that translations tend to be paraphrases of the
+source sentences, the translation objective encourages the LSTM to find sentence representations
+that capture their meaning, as sentences with similar meanings are close to each other while different
+
+
+<p align="center">
+<img src="../Images/Images/fig1.jpg">
+</p>
 
 ## Usage
 
